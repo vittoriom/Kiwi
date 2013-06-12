@@ -18,21 +18,21 @@
 
 - (void)testItShouldHaveTheRightMatcherStrings {
     NSArray *matcherStrings = [KWBeEmptyMatcher matcherStrings];
-    NSArray *expectedStrings = @[@"beEmpty"];
+    NSArray *expectedStrings = [NSArray arrayWithObject:@"beEmpty"];
     STAssertEqualObjects([matcherStrings sortedArrayUsingSelector:@selector(compare:)],
                          [expectedStrings sortedArrayUsingSelector:@selector(compare:)],
                          @"expected specific matcher strings");
 }
 
 - (void)testItShouldMatchEmptyCollections {
-    id subject = @{};
+    id subject = [NSDictionary dictionary];
     id matcher = [KWBeEmptyMatcher matcherWithSubject:subject];
     [matcher beEmpty];
     STAssertTrue([matcher evaluate], @"expected positive match");
 }
 
 - (void)testItShouldNotMatchNonEmptyCollections {
-    id subject = @{@"foo": @"bar"};
+    id subject = [NSDictionary dictionaryWithObject:@"bar" forKey:@"foo"];
     id matcher = [KWBeEmptyMatcher matcherWithSubject:subject];
     [matcher beEmpty];
     STAssertFalse([matcher evaluate], @"expected negative match");

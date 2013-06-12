@@ -18,14 +18,14 @@
 
 - (void)testItShouldHaveTheRightMatcherStrings {
     NSArray *matcherStrings = [KWBeTrueMatcher matcherStrings];
-    NSArray *expectedStrings = @[@"beTrue", @"beFalse", @"beYes", @"beNo"];
+    NSArray *expectedStrings = [NSArray arrayWithObjects:@"beTrue", @"beFalse", @"beYes", @"beNo", nil];
     STAssertEqualObjects([matcherStrings sortedArrayUsingSelector:@selector(compare:)],
                          [expectedStrings sortedArrayUsingSelector:@selector(compare:)],
                          @"expected specific matcher strings");
 }
 
 - (void)testItShouldRaiseWhenTheSubjectIsInvalid {
-    id subject = @[];
+    id subject = [NSArray array];
     id matcher = [KWBeTrueMatcher matcherWithSubject:subject];
     [matcher beTrue];
     STAssertThrowsSpecificNamed([matcher evaluate], NSException, @"KWMatcherException", @"expected raised exception");

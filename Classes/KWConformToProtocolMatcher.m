@@ -27,7 +27,7 @@
 #pragma mark Getting Matcher Strings
 
 + (NSArray *)matcherStrings {
-    return @[@"conformToProtocol:"];
+    return [NSArray arrayWithObject:@"conformToProtocol:"];
 }
 
 #pragma mark -

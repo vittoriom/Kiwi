@@ -36,7 +36,7 @@
 #pragma mark Getting Matcher Strings
 
 + (NSArray *)matcherStrings {
-    return @[@"contain:", @"containObjectsInArray:"];
+    return [NSArray arrayWithObjects:@"contain:", @"containObjectsInArray:", nil];
 }
 
 #pragma mark -
@@ -59,7 +59,7 @@
 
 - (NSString *)objectsPhrase {
     if ([self.objects count] == 1)
-        return [KWFormatter formatObject:(self.objects)[0]];
+        return [KWFormatter formatObject:[self.objects objectAtIndex:0]];
 
     return [NSString stringWithFormat:@"all of %@", [KWFormatter formatObject:self.objects]];
 }
@@ -77,7 +77,7 @@
 #pragma mark Configuring Matchers
 
 - (void)contain:(id)anObject {
-    self.objects = @[anObject];
+    self.objects = [NSArray arrayWithObject:anObject];
 }
 
 - (void)containObjectsInArray:(NSArray *)anArray {

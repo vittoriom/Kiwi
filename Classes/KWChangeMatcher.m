@@ -29,7 +29,7 @@
 }
 
 + (NSArray *)matcherStrings {
-    return @[@"change:by:", @"change:"];
+    return [NSArray arrayWithObjects:@"change:by:", @"change:", nil];
 }
 
 - (NSString *)failureMessageForShould {

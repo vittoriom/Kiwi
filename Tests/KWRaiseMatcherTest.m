@@ -18,10 +18,10 @@
 
 - (void)testItShouldHaveTheRightMatcherStrings {
     NSArray *matcherStrings = [KWRaiseMatcher matcherStrings];
-    NSArray *expectedStrings = @[@"raiseWhenSent:",
+    NSArray *expectedStrings = [NSArray arrayWithObjects:@"raiseWhenSent:",
                                                          @"raiseWithName:whenSent:",
                                                          @"raiseWithReason:whenSent:",
-                                                         @"raiseWithName:reason:whenSent:"];
+                                                         @"raiseWithName:reason:whenSent:", nil];
     STAssertEqualObjects([matcherStrings sortedArrayUsingSelector:@selector(compare:)],
                          [expectedStrings sortedArrayUsingSelector:@selector(compare:)],
                          @"expected specific matcher strings");

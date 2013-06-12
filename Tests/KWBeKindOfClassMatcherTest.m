@@ -18,7 +18,7 @@
 
 - (void)testItShouldHaveTheRightMatcherStrings {
     NSArray *matcherStrings = [KWBeKindOfClassMatcher matcherStrings];
-    NSArray *expectedStrings = @[@"beKindOfClass:"];
+    NSArray *expectedStrings = [NSArray arrayWithObject:@"beKindOfClass:"];
     STAssertEqualObjects([matcherStrings sortedArrayUsingSelector:@selector(compare:)],
                          [expectedStrings sortedArrayUsingSelector:@selector(compare:)],
                          @"expected specific matcher strings");

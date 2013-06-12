@@ -27,7 +27,7 @@
 #pragma mark Getting Matcher Strings
 
 + (NSArray *)matcherStrings {
-    return @[@"respondToSelector:"];
+    return [NSArray arrayWithObject:@"respondToSelector:"];
 }
 
 #pragma mark -

@@ -48,7 +48,7 @@
 #pragma mark Getting Matcher Strings
 
 + (NSArray *)matcherStrings {
-  return @[@"match:"];
+  return [NSArray arrayWithObjects:@"match:", nil];
 }
 
 #pragma mark -

@@ -35,7 +35,7 @@
 #pragma mark Getting Matcher Strings
 
 + (NSArray *)matcherStrings {
-    return @[@"beIdenticalTo:"];
+    return [NSArray arrayWithObject:@"beIdenticalTo:"];
 }
 
 #pragma mark -

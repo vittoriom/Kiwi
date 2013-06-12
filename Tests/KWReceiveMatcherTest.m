@@ -18,7 +18,7 @@
 
 - (void)testItShouldHaveTheRightMatcherStrings {
     id matcherStrings = [KWReceiveMatcher matcherStrings];
-    id expectedStrings = @[@"receive:",
+    id expectedStrings = [NSArray arrayWithObjects:@"receive:",
                                                    @"receive:withCount:",
                                                    @"receive:withCountAtLeast:",
                                                    @"receive:withCountAtMost:",
@@ -27,7 +27,7 @@
                                                    @"receive:andReturn:withCountAtLeast:",
                                                    @"receive:andReturn:withCountAtMost:",
                                                    @"receiveMessagePattern:countType:count:",
-                                                   @"receiveMessagePattern:andReturn:countType:count:"];
+                                                   @"receiveMessagePattern:andReturn:countType:count:", nil];
     STAssertEqualObjects([matcherStrings sortedArrayUsingSelector:@selector(compare:)],
                          [expectedStrings sortedArrayUsingSelector:@selector(compare:)],
                          @"expected specific matcher strings");

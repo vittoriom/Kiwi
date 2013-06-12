@@ -39,79 +39,79 @@
 		{
 			int value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithInt:value];
 		}	
 		case 's':
 		{
 			short value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithShort:value];
 		}	
 		case 'l':
 		{
 			long value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithLong:value];
 		}	
 		case 'q':
 		{
 			long long value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithLongLong:value];
 		}	
 		case 'c':
 		{
 			char value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithChar:value];
 		}	
 		case 'C':
 		{
 			unsigned char value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithUnsignedChar:value];
 		}	
 		case 'I':
 		{
 			unsigned int value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithUnsignedInt:value];
 		}	
 		case 'S':
 		{
 			unsigned short value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithUnsignedShort:value];
 		}	
 		case 'L':
 		{
 			unsigned long value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithUnsignedLong:value];
 		}	
 		case 'Q':
 		{
 			unsigned long long value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithUnsignedLongLong:value];
 		}	
 		case 'f':
 		{
 			float value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithFloat:value];
 		}	
 		case 'd':
 		{
 			double value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithDouble:value];
 		}	
 		case 'B':
 		{
 			bool value;
 			[self getArgument:&value atIndex:argIndex];
-			return @(value);
+			return [NSNumber numberWithBool:value];
 		}
 		case '^':
         {
@@ -145,7 +145,7 @@
 	unsigned int i;
 	for(i = 2; i < numberOfArgs; i++)
 	{
-		[description appendFormat:@"%@%@:", (i > 2 ? @" " : @""), selectorParts[(i - 2)]];
+		[description appendFormat:@"%@%@:", (i > 2 ? @" " : @""), [selectorParts objectAtIndex:(i - 2)]];
 		[description appendString:[self argumentDescriptionAtIndex:i]];
 	}
 	

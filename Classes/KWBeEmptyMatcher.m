@@ -27,7 +27,7 @@
 #pragma mark Getting Matcher Strings
 
 + (NSArray *)matcherStrings {
-    return @[@"beEmpty"];
+    return [NSArray arrayWithObject:@"beEmpty"];
 }
 
 #pragma mark -

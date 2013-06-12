@@ -27,7 +27,7 @@
 #pragma mark Getting Matcher Strings
 
 + (NSArray *)matcherStrings {
-    return @[@"beKindOfClass:"];
+    return [NSArray arrayWithObject:@"beKindOfClass:"];
 }
 
 #pragma mark -

@@ -18,7 +18,7 @@
 
 - (void)testItShouldHaveTheRightMatcherStrings {
     NSArray *matcherStrings = [KWBeBetweenMatcher matcherStrings];
-    NSArray *expectedStrings = @[@"beBetween:and:", @"beInTheIntervalFrom:to:"];
+    NSArray *expectedStrings = [NSArray arrayWithObjects:@"beBetween:and:", @"beInTheIntervalFrom:to:", nil];
     STAssertEqualObjects([matcherStrings sortedArrayUsingSelector:@selector(compare:)],
                          [expectedStrings sortedArrayUsingSelector:@selector(compare:)],
                          @"expected specific matcher strings");

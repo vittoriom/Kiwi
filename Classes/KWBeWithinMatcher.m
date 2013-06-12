@@ -40,7 +40,7 @@
 #pragma mark Getting Matcher Strings
 
 + (NSArray *)matcherStrings {
-    return @[@"beWithin:of:", @"equal:withDelta:"];
+    return [NSArray arrayWithObjects:@"beWithin:of:", @"equal:withDelta:", nil];
 }
 
 #pragma mark -

@@ -58,9 +58,9 @@
 - (NSException *)exceptionValue {
     NSDictionary *userInfo = nil;
     if (self.callSite) {
-        NSNumber *lineNumber = @(self.callSite.lineNumber);
-        userInfo = @{SenTestFilenameKey: self.callSite.filename,
-                                                                            SenTestLineNumberKey: lineNumber};
+	    NSNumber *lineNumber = [NSNumber numberWithUnsignedInteger:self.callSite.lineNumber];
+        userInfo = [NSDictionary dictionaryWithObjectsAndKeys:self.callSite.filename, SenTestFilenameKey,
+                                                                        lineNumber, SenTestLineNumberKey, nil];
     }
     return [NSException exceptionWithName:@"KWFailureException" reason:message userInfo:userInfo];
 }

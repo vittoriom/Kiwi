@@ -20,7 +20,7 @@
 
 - (void)testItShouldHaveTheRightMatcherStrings {
     NSArray *matcherStrings = [KWChangeMatcher matcherStrings];
-    NSArray *expectedStrings = @[@"change:", @"change:by:"];
+    NSArray *expectedStrings = [NSArray arrayWithObjects:@"change:", @"change:by:", nil];
     STAssertEqualObjects([matcherStrings sortedArrayUsingSelector:@selector(compare:)],
                          [expectedStrings sortedArrayUsingSelector:@selector(compare:)],
                          @"expected specific matcher strings");
