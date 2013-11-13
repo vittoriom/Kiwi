@@ -328,10 +328,10 @@ void afterEach(void (^block)(void)) {
     afterEachWithCallSite(nil, block);
 }
 
-void it(NSString *aDescription, void (^block)(void)) {
-    KWCallSite *callSite = callSiteAtAddressIfNecessary(kwCallerAddress());
-    itWithCallSite(callSite, aDescription, block);
-}
+//void it(NSString *aDescription, void (^block)(void)) {
+//    KWCallSite *callSite = callSiteAtAddressIfNecessary(kwCallerAddress());
+//    itWithCallSite(callSite, aDescription, block);
+//}
 
 void let_(__autoreleasing id *anObjectRef, const char *aSymbolName, id (^block)(void))
 {

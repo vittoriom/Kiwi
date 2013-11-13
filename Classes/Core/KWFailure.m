@@ -5,7 +5,8 @@
 //
 
 #import "KWFailure.h"
-#import <SenTestingKit/SenTestingKit.h>
+ 
+#import <XCTest/XCTest.h>
 #import "KWCallSite.h"
 
 @implementation KWFailure

@@ -67,7 +67,7 @@ void afterAll(void (^block)(void));
 void beforeEach(void (^block)(void));
 void afterEach(void (^block)(void));
 void let_(id *anObjectRef, const char *aSymbolName, id (^block)(void));
-void it(NSString *aDescription, void (^block)(void));
+//void it(NSString *aDescription, void (^block)(void));
 void specify(void (^block)(void));
 void pending_(NSString *aDescription, void (^block)(void));
 
